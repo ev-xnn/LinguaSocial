@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="ecommerce.master.cs"
+    Inherits="YourProject.ecommerce" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+        LinguaStore
+    </title>
+</head>
+<body>
+<form runat="server">
+
+    <!-- HEADER -->
+    <header>
+        <a href="ecommerce-home.aspx">LinguaStore</a> |
+        <a href="ecommerce-accessories.aspx">Accessories</a> |
+        <a href="Clothings.aspx">Clothings</a> |
+        <a href="Stationary.aspx">Stationary</a> |
+
+        <!-- Search toggle -->
+        <asp:LinkButton ID="lnkSearch"
+            runat="server"
+            OnClientClick="toggleSearch(); return false;">
+            Search
+        </asp:LinkButton> |
+
+        <a href="Cart.aspx">Cart</a> |
+        <a href="Login.aspx">Login</a>
+        <hr />
+    </header>
+
+    <!-- SEARCH DRAWER -->
+    <div id="searchDrawer" style="display:none;">
+        <div>
+            <strong>Search our store</strong>
+            <a href="#" onclick="toggleSearch(); return false;">X</a>
+        </div>
+        <br />
+
+        <asp:TextBox ID="txtSearch"
+            runat="server"
+            placeholder="Search products..." />
+
+        <asp:Button ID="btnSearch"
+            runat="server"
+            Text="Go"
+            OnClick="btnSearch_Click" />
+
+        <hr />
+    </div>
+
+    <script type="text/javascript">
+        function toggleSearch() {
+            var el = document.getElementById('searchDrawer');
+            el.style.display = (el.style.display === 'none' || el.style.display === '')
+                ? 'block'
+                : 'none';
+        }
+    </script>
+
+    <!-- PAGE CONTENT -->
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    <!-- FOOTER -->
+    <footer>
+        <hr />
+        <p>&copy; <%: DateTime.Now.Year %> LinguaStore</p>
+    </footer>
+
+</form>
+</body>
+</html>
+
+
