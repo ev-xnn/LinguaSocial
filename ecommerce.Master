@@ -18,8 +18,8 @@
     <header>
         <a href="ecommerce-home.aspx">LinguaStore</a> |
         <a href="ecommerce-accessories.aspx">Accessories</a> |
-        <a href="Clothings.aspx">Clothings</a> |
-        <a href="Stationary.aspx">Stationary</a> |
+        <a href="ecommerce-clothings">Clothings</a> |
+        <a href="ecommerce-stationary">Stationary</a> |
 
         <!-- Search toggle -->
         <asp:LinkButton ID="lnkSearch"

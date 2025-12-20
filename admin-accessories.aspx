@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="Admin - Accessories - "
     Language="C#"
-    MasterPageFile="~/ecommerce.master"
+    MasterPageFile="~/Admin.master"
     AutoEventWireup="true"
     CodeBehind="admin-accessories.aspx.cs"
     Inherits="YourProject.admin_accessories" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="AdminContent" runat="server">
 
     <h2>Admin - Accessories</h2>
 

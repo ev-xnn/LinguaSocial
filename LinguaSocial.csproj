@@ -76,6 +76,7 @@
   <ItemGroup>
     <Content Include="admin-accessories-manage.aspx" />
     <Content Include="admin-accessories.aspx" />
+    <Content Include="ecommerce-clothings.aspx" />
     <Content Include="ecommerce-home.aspx" />
     <Content Include="Web.config" />
     <Content Include="ecommerce-accessories.aspx" />
@@ -94,6 +95,20 @@
     </Compile>
     <Compile Include="admin-accessories.aspx.designer.cs">
       <DependentUpon>admin-accessories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.master.designer.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+    </Compile>
+    <Compile Include="ecommerce-clothings.aspx.cs">
+      <DependentUpon>ecommerce-clothings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ecommerce-clothings.aspx.designer.cs">
+      <DependentUpon>ecommerce-clothings.aspx</DependentUpon>
     </Compile>
     <Compile Include="ecommerce-home.aspx.cs">
       <DependentUpon>ecommerce-home.aspx</DependentUpon>
@@ -121,6 +136,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.master" />
     <None Include="packages.config" />
     <Content Include="ecommerce.Master" />
     <None Include="Web.Debug.config">
